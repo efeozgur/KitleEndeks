@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import { switchCase } from '@babel/types';
+import {Actions} from 'react-native-router-flux';
 
 
 class Sonuc extends React.Component {
@@ -8,8 +8,13 @@ class Sonuc extends React.Component {
         super(props);
     }
 
-    hesapla () {
+    hesapla () {        
         const {boy, kilo} = this.props; 
+
+        if(boy==0 && kilo == 0) {
+            Actions.hata(); 
+        } else {
+        
         let sonuc = (kilo) / ((boy/100) * (boy/100));
 
         if(sonuc<18.5){
@@ -17,6 +22,7 @@ class Sonuc extends React.Component {
         } else if(sonuc >=18.5 && sonuc < 20) {
             return this.textdegerler("Normal");
         }
+    }
     }
 
 
@@ -42,5 +48,5 @@ class Sonuc extends React.Component {
     }
 }
 
-export default Sonuc; 
+export {Sonuc}; 
 

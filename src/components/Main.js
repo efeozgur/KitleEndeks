@@ -1,11 +1,12 @@
-import React from 'react';
-import { View, Image, TextInput, Dimensions } from 'react-native';
-import Buton from './Buton';
+import React, {Component} from 'react';
+import { View, Image, TextInput, Dimensions,Text } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import Buton from './Buton';
+
 
 const { width} = Dimensions.get('window');
 
-class Main extends React.Component {
+class Main extends Component {
     
     state = {
         boy : 0, 
@@ -17,7 +18,7 @@ class Main extends React.Component {
         const { containerStyle, subContainerStyle,textInputStyle } = styles;
         return (
             <View style={containerStyle}>
-
+                <Text style={{color:'#F8B473', fontSize:40, marginBottom:40}}>Vücut Kitle Endeksi V1.0</Text>
                 <View style={subContainerStyle}>
 
                     <Image source={require('../img/logo.png')} />
@@ -41,7 +42,8 @@ class Main extends React.Component {
                 />
                 
                     
-                    <Buton onPress={()=>Actions.sonuc({boy:this.state.boy, kilo :this.state.kilo})} butonText="HESAPLA"/>                    
+                    <Buton onPress={()=> Actions.sonuc({boy:this.state.boy, kilo :this.state.kilo})}                   
+                     butonText="HESAPLA"/>                    
                 </View>
             </View>
         );
