@@ -77,4 +77,4 @@ styles = {
 
 }
 
-export default Main; 
+export {Main}; 
