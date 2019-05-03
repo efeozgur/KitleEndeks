@@ -52,17 +52,14 @@ class Main extends React.Component {
 styles = {
     containerStyle: {
         flex: 1,
-        flexDirection: 'row',
+        
         alignItems: 'center',
         justifyContent: 'center',
     },
 
     subContainerStyle: {
-        flex: 2,
-        flexDirection: 'column',
         marginTop: 20,
         justifyContent: 'center'
-
     },
 
     textInputStyle: {
