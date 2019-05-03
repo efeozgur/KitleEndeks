@@ -3,19 +3,15 @@ import { View, Image, TextInput, Dimensions, Text } from 'react-native';
 import Buton from './Buton';
 import { Actions } from 'react-native-router-flux';
 
-
-const { width, height } = Dimensions.get('window');
+const { width} = Dimensions.get('window');
 
 class Main extends React.Component {
-
-
     renderButton(holder) {
         const { textInputStyle } = styles;
         return (
             <TextInput keyboardType='numeric' placeholderTextColor='gray' placeholder={holder} style={textInputStyle} />
         );
     }
-
 
     render() {
         const { containerStyle, subContainerStyle, textInputStyle } = styles;
@@ -29,17 +25,9 @@ class Main extends React.Component {
                 <View style={subContainerStyle}>
                     {this.renderButton("Boyunuz (Örn. 185)")}
                     {this.renderButton("Kilonuz (Örn. 80)")}
-
-                    <Buton onPress={()=>Actions.sonuc()} butonText="HESAPLA"/>
-
-
-                    
+                    <Buton onPress={()=>Actions.sonuc()} butonText="HESAPLA"/>                    
                 </View>
-
-
-
             </View>
-
         );
     }
 }
