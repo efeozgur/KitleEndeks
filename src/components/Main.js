@@ -6,15 +6,15 @@ import { Actions } from 'react-native-router-flux';
 const { width} = Dimensions.get('window');
 
 class Main extends React.Component {
-    renderButton(holder) {
-        const { textInputStyle } = styles;
-        return (
-            <TextInput keyboardType='numeric' placeholderTextColor='gray' placeholder={holder} style={textInputStyle} />
-        );
+    
+    state = {
+        boy : 0, 
+        kilo : 0, 
     }
 
     render() {
-        const { containerStyle, subContainerStyle } = styles;
+        
+        const { containerStyle, subContainerStyle,textInputStyle } = styles;
         return (
             <View style={containerStyle}>
 
@@ -23,9 +23,25 @@ class Main extends React.Component {
                     <Image source={require('../img/logo.png')} />
                 </View>
                 <View style={subContainerStyle}>
-                    {this.renderButton("Boyunuz (Örn. 185)")}
-                    {this.renderButton("Kilonuz (Örn. 80)")}
-                    <Buton onPress={()=>Actions.sonuc()} butonText="HESAPLA"/>                    
+
+                <TextInput 
+                    onChangeText = {boy => this.setState({boy})}
+                    keyboardType='numeric' 
+                    placeholderTextColor='gray' 
+                    placeholder="Boyunuz (Örn. 185)"
+                    style={textInputStyle} 
+                />
+
+                <TextInput 
+                    onChangeText = {kilo => this.setState({kilo})}
+                    keyboardType='numeric' 
+                    placeholderTextColor='gray' 
+                    placeholder="Kilonuz (Örn. 80)"
+                    style={textInputStyle} 
+                />
+                
+                    
+                    <Buton onPress={()=>Actions.sonuc({boy:this.state.boy, kilo :this.state.kilo})} butonText="HESAPLA"/>                    
                 </View>
             </View>
         );
@@ -56,6 +72,7 @@ styles = {
         borderWidth: 1,
         borderStyle: 'solid',
         borderColor: 'gray',
+        paddingLeft:20, 
 
     }
 
