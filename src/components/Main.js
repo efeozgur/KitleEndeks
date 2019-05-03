@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, TextInput, Dimensions, Text } from 'react-native';
+import { View, Image, TextInput, Dimensions } from 'react-native';
 import Buton from './Buton';
 import { Actions } from 'react-native-router-flux';
 
@@ -14,7 +14,7 @@ class Main extends React.Component {
     }
 
     render() {
-        const { containerStyle, subContainerStyle, textInputStyle } = styles;
+        const { containerStyle, subContainerStyle } = styles;
         return (
             <View style={containerStyle}>
 
