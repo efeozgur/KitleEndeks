@@ -28,9 +28,7 @@ class Sonuc extends React.Component {
             return this.textdegerler("Obez2");
         }
     
-    }
-
- 
+    } 
     textdegerler(deger) {
         switch (deger) {
             case "Zayıf":

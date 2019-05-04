@@ -2,7 +2,6 @@ import React from 'react';
 import {View, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-
 const {width} = Dimensions.get('window');
 
 const Gosterge = ({baslik,icerik, resim}) => {           
@@ -26,9 +25,7 @@ const Gosterge = ({baslik,icerik, resim}) => {
             break; 
         default:
             break; 
-    }
-
-    
+    }   
 
         return (
            
@@ -48,8 +45,6 @@ const Gosterge = ({baslik,icerik, resim}) => {
             </View>
         );
 }
-
-
 const styles  = {
     viewStyle : {
         flex:1, 
@@ -78,6 +73,4 @@ const styles  = {
 
     }
 }
-
-
 export default Gosterge; 
