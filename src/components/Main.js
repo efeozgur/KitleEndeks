@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, TextInput, Dimensions, Text } from 'react-native';
+import { View, Image, TextInput, Dimensions, Text, Alert } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Buton from './Buton';
 
@@ -33,16 +33,18 @@ class Main extends Component {
                         onChangeText={kilo => this.setState({ kilo })}
                         keyboardType='numeric'
                         placeholderTextColor='gray'
-                        placeholder="Kilonuz (Örn. 80)"
+                        placeholder="Kilonuz (Örn. 80)"  
                         style={textInputStyle}
                     />
                     <Buton onPress={() => {
                         const { boy, kilo } = this.state;
-                        if (boy > 0 && kilo > 0) {
+                        if ((boy > 0 && boy <250) && (kilo > 0 && kilo<200)) {
                             Actions.sonuc({ boy: this.state.boy, kilo: this.state.kilo })
 
                         } else {
-                            Actions.hata();
+                            Alert.alert("UYARI","Boy ve Kilo alanlarına veri girişi yapmadınız veya geçersiz bir giriş yaptınız!",[
+                                {text : "Tamam", style:'cancel'}
+                            ])
                         }
                     }}
                         butonText="HESAPLA" />

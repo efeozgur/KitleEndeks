@@ -7,12 +7,10 @@ class Sonuc extends React.Component {
     constructor(props) {
         super(props);
     }  
-
-
     hesapla () {        
         const {boy, kilo} = this.props; 
 
-   
+        
         
         let sonuc = (kilo) / ((boy/100) * (boy/100));
 
