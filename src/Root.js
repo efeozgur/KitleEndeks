@@ -9,7 +9,7 @@ class Root extends Component {
                 <Scene key = 'Root'> 
                     <Scene key = 'main' initial hideNavBar title="Anasayfa"  component={Main} />
                     <Scene key = 'sonuc' hideNavBar rightTitle="Yeni"  titleStyle={{color:'black'}} title="Sonuç Gösteriliyor" component={Sonuc} />
-                    <Scene key = 'hata' hideNavBar  titleStyle={{color:'black'}} title="Hata" component={Hata} />
+                    <Scene key = 'hata'   titleStyle={{color:'black'}} title="Hata" component={Hata} />
                 </Scene>
             </Router>
         ); 
