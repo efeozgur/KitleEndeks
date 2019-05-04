@@ -35,7 +35,7 @@ const Gosterge = ({baslik,icerik, resim}) => {
                <View style={styles.viewStyle}>                
                 <Image 
                     source={res}  
-                    style={{marginBottom:10,}}
+                    style={{marginBottom:10,}} 
                 />
                    <Text style={styles.baslikStyle}>{baslik}</Text>
                 <Text style={styles.icerikStyle}>
