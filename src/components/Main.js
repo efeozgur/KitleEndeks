@@ -16,9 +16,9 @@ class Main extends Component {
     render() {
 
         const { containerStyle, subContainerStyle, textInputStyle } = styles;
-        return (
+        return ( 
             <View style={containerStyle}>
-                <Text style={{ color: '#F8B473', fontSize: 20, marginBottom: 40 }}>Vücut Kitle Endeksi V1.0</Text>
+                <Text style={{backgroundColor:'lightblue',  borderRadius:10, padding:10,  color: '#fff', fontWeight:'bold', fontSize: 20, marginBottom: 40, marginTop:30, }}>Vücut Kitle Endeksi V1.0</Text>
                 <View style={subContainerStyle}>
 
                     <TextInput
@@ -63,7 +63,7 @@ class Main extends Component {
 styles = {
     containerStyle: {
         flex: 1,
-
+        backgroundColor:'#fff',
         alignItems: 'center',
         justifyContent: 'flex-start',
     },

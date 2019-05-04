@@ -36,7 +36,7 @@ class Sonuc extends React.Component {
             case "Zayıf":
                 return <Gosterge resim="zayif" baslik = "Zayıf" icerik="Boyunuza göre uygun ağırlıkta olmadığınızı, zayıf olduğunuzu gösterir. Zayıflık, bazı hastalıklar için risk oluşturan ve istenmeyen bir durumdur. Boyunuza uygun ağırlığa erişmeniz için yeterli ve dengeli beslenmeli, beslenme alışkanlıklarınızı geliştirmeye özen göstermelisiniz." />
             case "Normal":
-                return <Gosterge resim="normal" baslik = "Normal" icerik="Boyunuza göre uygun ağırlıkta olduğunuzu gösterir. Yeterli ve dengeli beslenerek ve düzenli fiziksel aktivite yaparak bu ağırlığınızı korumaya özen gösteriniz." />              
+                return <Gosterge resim="normal" baslik = "Normal" icerik="Boyunuza göre uygun ağırlıktasınız. Yeterli ve dengeli beslenerek ve düzenli fiziksel aktivite yaparak bu ağırlığınızı korumaya özen gösteriniz." />              
                 
                
             case "Fazla Kilolu" :
@@ -68,7 +68,8 @@ const styles = {
     viewStyle : {
         flex:1, 
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        backgroundColor:'#fff'
     },
     textStyle : {
         borderWidth:1, 
